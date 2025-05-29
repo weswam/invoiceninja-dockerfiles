@@ -21,11 +21,6 @@ services:
       - app_storage:/var/www/html/storage
     networks:
       - app-network
-    depends_on:
-      mysql:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
     logging: *default-logging
 
   nginx:
